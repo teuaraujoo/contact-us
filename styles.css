@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+body, html {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    background-color: rgb(255, 255, 255);  
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100vh;
+    width: 28%;
+    background-image: linear-gradient(to bottom, #3538ff, #007aff, #00a2ff, #00c0f9, #1dd9e1);
+}
+
+.content-left {
+    font-size: 12px;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    margin-left: 1.8rem;
+}
+.content-left img {
+    width: 5vw;
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+}
+
+
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(234,238,242);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+.container:hover {
+    background-color: rgb(19,24,22);
+    transition-duration: .3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(127,131,134);
+}
+
+.socialContainer:hover .socialSvg path{
+    animation: slide-in-top 0.3s both;
+    fill: rgb(227,230,230);
+}
+
+@keyframes slide-in-top {
+0% {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+
+.right-side {
+    height: 100vh;
+    margin-left: 3rem;
+    margin-top: 4rem;
+}
+
+.out-btn {
+    background-color: rgba(233, 233, 233, 0.692);
+    width: 1.25rem;
+    border: transparent;
+    border-radius: 2px;
+    position: absolute;
+    top: 2%;
+    left: 98%;
+    right: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.out-btn:hover {
+    transform: scale(1.1);
+}
+
+.title {
+    line-height: 1.4;
+    color: black;
+    margin-bottom: 3rem;
+}
+
+.title h1 {
+    font-weight: 400;
+}
+
+.title span {
+    font-weight: 700;
+}
+
+.title p {
+    color: rgba(46, 46, 46, 0.671);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+    gap: 6.3rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 65vw;
+}
+
+.names {
+    display: flex;
+    justify-content: center;
+    gap: 3.75rem;
+}
+
+.names .input-field {
+    width: 37rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    color: rgba(7, 7, 7, 0.678);
+    font-weight: 500;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    border-radius: 1px;
+    background-color: transparent;
+    box-shadow: 2px 2px 10px rgba(24, 24, 24, 0.329);
+    transition: box-shadow 0.15s ease, outline 0.15s ease;
+}
+
+.input-field i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 20px;
+    margin-left: 10px;  
+}
+
+.form-control {
+    padding: 20px 5px; 
+    border: none;
+    border-radius: 2px;
+}
+.form-control-area {
+    padding: 10px 5px; 
+    border: none;
+    border-radius: 2px;
+}
+
+.form-control:focus {
+    outline: none;
+}
+
+.form-control-area:focus {
+    outline: none;
+}
+
+.input-box .input-field:focus-within {
+    outline: 2px solid rgba(53, 53, 53, 0.384);
+    outline-offset: 0;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    color: #000;
+}
+
+.send-btn {
+    padding: 1.2rem;
+    cursor: pointer;
+    background-color: rgb(53, 56, 255);
+    border: transparent;
+    border-radius: 1px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.322);
+}
+
+@media screen and (max-width: 1440px) {
+    
+}
+
+@media screen and (max-width: 1000px) {
+    
+}
