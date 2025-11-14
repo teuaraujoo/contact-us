@@ -11,6 +11,6 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.6rem;
+    font-size: 1.05rem;
     background-image: linear-gradient(165deg, #3538ff, #007aff, #00a2ff, #00c0f9, #1dd9e1);
 }
