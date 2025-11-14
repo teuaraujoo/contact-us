@@ -1,3 +1,5 @@
+/* Reset + config iniciais */
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -11,15 +13,27 @@ body, html {
     width: 100%;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 main {
-    height: 100vh;
     display: flex;
     background-color: rgb(255, 255, 255);  
+    animation-name: fade-in; 
+    animation-duration: 1s; 
+    animation-timing-function: ease-out; 
+    animation-fill-mode: forwards; 
 }
+
+/* animação fade-in */
+
+@keyframes fade-in {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+/* Lado Esquerdo */
 
 .left-side {
     display: flex;
@@ -39,9 +53,12 @@ main {
     width: 25rem;
     margin-left: 1.8rem;
 }
+
 .content-left img {
     width: 5vw;
 }
+
+/* Botões redes sociais */
 
 .card {
     width: fit-content;
@@ -52,7 +69,6 @@ main {
     padding: 25px 25px;
     gap: 20px;
 }
-
 
 .socialContainer {
     width: 52px;
@@ -100,11 +116,14 @@ main {
 }
 }
 
+/* Lado direito */
+
 .right-side {
-    height: 100vh;
     margin-left: 3rem;
     margin-top: 4rem;
 }
+
+/* Botão de sair */
 
 .out-btn {
     background-color: rgba(233, 233, 233, 0.692);
@@ -119,9 +138,15 @@ main {
     transition: all 0.2s ease;
 }
 
+.out-btn a {
+    color: black;
+}
+
 .out-btn:hover {
     transform: scale(1.1);
 }
+
+/* Título Forms */
 
 .title {
     line-height: 1.4;
@@ -141,18 +166,20 @@ main {
     color: rgba(46, 46, 46, 0.671);
 }
 
+/* Forms + div filhas */
+
 #form {
     display: flex;
     flex-direction: column;
     margin-right: 3rem;
-    gap: 6.3rem;
+    gap: 2rem;
 }
 
 .input-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 65vw;
+    width: 100%;
 }
 
 .names {
@@ -177,6 +204,8 @@ main {
     font-weight: 500;
 }
 
+/* input + ícone */
+
 .input-field {
     display: flex;
     align-items: center;
@@ -195,34 +224,65 @@ main {
     margin-left: 10px;  
 }
 
+/* estilizacao do input */
+
 .form-control {
     padding: 20px 5px; 
     border: none;
     border-radius: 2px;
 }
-.form-control-area {
+
+/* Input - Maior x menor x textarea */
+
+.form-control.big {
+    width: 80%;
+}
+
+.form-control.mini {
+    width: 60%;
+}
+
+.form-control.area {
     padding: 10px 5px; 
     border: none;
     border-radius: 2px;
+    width: 100%;
 }
 
-.form-control:focus {
+/* Bordas dos inputs */
+
+.form-control:focus { /* Borda padrão do input */
     outline: none;
 }
 
-.form-control-area:focus {
-    outline: none;
-}
-
-.input-box .input-field:focus-within {
+.input-box .input-field:focus-within { /* borda no foco */
     outline: 2px solid rgba(53, 53, 53, 0.384);
     outline-offset: 0;
 }
+
+.input-field.error { /* borda no erro */
+    outline: 2px solid rgba(255, 0, 0, 0.384);
+    outline-offset: 0;
+}
+
+.input-field.error a { /* texto de erro */
+    color: red;
+    font-size: 0.8rem;
+    visibility: visible;
+}
+
+.input-box a { /* texto de erro escondido */
+    visibility: hidden;
+}
+
+/* Background do autocomplete */
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px white inset !important;
     color: #000;
 }
+
+/* Botão de envio */
 
 .send-btn {
     padding: 1.2rem;
@@ -241,10 +301,197 @@ input:-webkit-autofill {
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.322);
 }
 
+/* Responsividade */
+
 @media screen and (max-width: 1440px) {
-    
+
+.content-left {
+    font-size: 10px;
+    width: 18rem;
 }
 
-@media screen and (max-width: 1000px) {
+.socialContainer {
+    width: 42px;
+    height: 42px;
+}
+
+#form {
+    margin-right: 1rem;
+    gap: 0rem;
+}
+
+.right-side {
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+
+.out-btn {
+    left: 97%;
+}
+
+.title {
+    line-height: 1.4;
+    color: black;
+    margin-bottom: 3rem;
+}
+
+.names {
+    gap: 2rem;
+}
+
+.names .input-field {
+    width: 25.3rem;
+}
+
+.form-control.big {
+    width: 68%;
+}
+
+.form-control.mini {
+    width: 45%;
+}
+
+.form-control.area {
+    height: 15vh;
+}
+
+}
+
+@media screen and (max-width: 1224px) {
     
+main {
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-side {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+}
+
+.content-left {
+    font-size: 10px;
+    width: 20rem;
+    margin-left: 1.8rem;
+}
+
+.card {
+    gap: 15px;
+}
+
+.socialContainer {
+    width: 32px;
+    height: 32px;
+}
+
+.socialSvg {
+    width: 12px;
+}
+
+.right-side {
+    margin-left: 1.8rem;
+    margin-top: 2rem;
+}
+
+.out-btn {
+    top: 1%;
+    left: 96%;
+}
+
+.title {
+    line-height: 1.4;
+    color: black;
+    margin-bottom: 3rem;
+}
+
+#form {
+    gap: 0.2rem;
+}
+
+.names {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.names .input-field {
+    width: 19rem;
+}
+
+.form-control.big {
+    width: 65%;
+}
+
+.form-control.mini {
+    width: 42%;
+}
+
+.input-field.error a { /* texto de erro */
+    font-size: 0.6rem;
+}
+}
+
+@media screen and (max-width: 728px) {
+
+body, html {
+    position: relative;
+}
+    
+.content-left {
+    font-size: 6px;
+}
+
+.card {
+    gap: 10px;
+}
+
+.socialContainer {
+    width: 22px;
+    height: 22px;
+}
+
+.socialSvg {
+    width: 10px;
+}
+
+.out-btn {
+    top: 1%;
+    left: 94%;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 1.8rem 0rem 1.8rem;
+}
+
+.names {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.names .input-field {
+    width: 100%;
+}
+
+.form-control.big {
+    width: 70%;
+}
+
+.form-control.mini {
+    width: 35%;
+}
+
+.input-field.error a { /* texto de erro */
+    font-size: 0.6rem;
+}
+
+.send-btn {
+    transition: all 0.3s ease;
+    margin-bottom: 1.8rem;
+}
 }

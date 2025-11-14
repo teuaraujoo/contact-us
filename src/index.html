@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&display=swap" rel="stylesheet">
@@ -12,11 +12,17 @@
 </head>
 <body>
     <main>
+
+<!-- LADO ESQUERDO / PARTE DE CIMA -->
+
         <div class="left-side">
             <div class="content-left">
-                <img src="/assets/Disney_logo.png" alt="">
+                <img src="./assets/Disney_logo.png" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae dicta, officia enim labore odio reprehenderit incidunt eos quaerat deserunt consectetur harum quae numquam et impedit ad, velit optio voluptatum! Repudiandae?</p>
             </div>
+
+<!-- BOTÕES REDES SOCIAIS -->
+
             <div class="card">
                 <a href="#" class="socialContainer container">
                     <svg 
@@ -63,29 +69,36 @@
                 </a>
             </div>  
         </div>
+
+<!-- LADO DIREITO / PARTE DE BAIXO -->
+
         <div class="right-side">
             <div class="out-btn">
-                <i class="fa-solid fa-x"></i>
+                <a href="./404page.html"><i class="fa-solid fa-x"></i></a>
             </div>
                 <div class="title">
                     <h1>ENTRE EM <span>CONTATO</span></h1>
                     <p>Preencha o formulário abixo e nos mande uma mensagem!</p>
                 </div>
-                <form action="" id="form" method="post">
+
+<!-- FORMULÁRIO -->
+
+                <form action="https://script.google.com/macros/s/AKfycbyvIo_J-3im-4nnCGZQreSqKEJU4g5lji4vxv0MwRrqJj4vsKlo1DjMEGYJUliRrksAmQ/exec" id="form" method="post">
                     <div class="input-container">
                         <div class="names">
                             <div class="input-box">
                                 <label for="name" class="form-label">Primeiro Nome</label>
                                 <div class="input-field">
                                     <i class="fa-regular fa-user"></i>
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Mateus" required>
+                                    <input type="text" name="name" id="name" class="form-control mini" placeholder="Mateus">
+                                        <a>Mensagem de erro</a>
                                 </div>
                             </div>
                             <div class="input-box">
                                 <label for="lastname" class="form-label">Último Nome</label>
                                 <div class="input-field">
                                     <i class="fa-regular fa-user"></i>
-                                    <input type="text" name="lastname" id="lastname" class="form-control" placeholder="De Araujo">
+                                    <input type="text" name="lastname" id="lastname" class="form-control mini" placeholder="De Araujo">
                                 </div>
                             </div>
                         </div>
@@ -93,26 +106,31 @@
                             <label for="phone" class="form-label">Telefone</label>
                             <div class="input-field">
                                 <i class="fa-solid fa-mobile-screen-button"></i>
-                                <input type="tel" name="phone" id="phone" class="form-control" pattern="(\[0-9]{2}\)\s(\[0-9]{1}\)?[0-9]{4}-[0-9]{4}" placeholder="(99) 99999-9999">
+                                <input type="tel" name="phone" id="phone" class="form-control big" pattern="(\[0-9]{2}\)\s(\[0-9]{1}\)?[0-9]{4}-[0-9]{4}" placeholder="(99) 99999-9999">
+                                <a>Mensagem de erro</a>
                             </div>
                         </div>
                         <div class="input-box">
                             <label for="email" class="form-label">Email</label>
                             <div class="input-field">
                                 <i class="fa-regular fa-envelope"></i>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="teuaraujo@email.com">
+                                <input type="email" name="email" id="email" class="form-control big" placeholder="teuaraujo@email.com">
+                                <a>mensagem de erro</a>
                             </div>
                         </div>
                         <div class="input-box">
-                            <label for="email" class="form-label">Mensagem</label>
+                            <label for="menssage" class="form-label">Mensagem</label>
                             <div class="input-field">
-                                <textarea name="mensage" id="mensage" rows="6" cols="1000" class="form-control-area" placeholder="Escreva sua mensaem aqui"></textarea>
+                                <textarea name="menssage" id="menssage" rows="10" class="form-control area" placeholder="Escreva sua mensaem aqui"></textarea>
                             </div>
+                            <a>Mensagem de erro</a>
                         </div>
                     </div>
                     <button class="send-btn" type="submit">Enviar</button>
                 </form>
             </div>
     </main>
+
+    <script src="./script/script.js"></script>
 </body>
 </html>

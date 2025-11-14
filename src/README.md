@@ -1,0 +1,15 @@
+UIVERSE - BOTOES
+FONTAWESOME - ICONS
+COLOR SPACE - CSS GRADIENT
+GOOGLE FONTS - pelo html (head)
+MEDIA QUERIES 
+KEY FRAMES
+FLEXBOX
+FORMS
+
+organizacao de pastas (src, styles, scripts, assets)
+
+VALIDACAO JAVASCRIPT
+LIGACAO COM GOOGLE SHEETS
+
+SUJEITO PROGAMADOR + TUTORIAS E PESQUISA NO GOOGLE (https://learning-axis.com/projects/google-sheets/)
